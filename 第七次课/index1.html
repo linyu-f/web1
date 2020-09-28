@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+            #box1{
+                background-color: blue;
+                width: 100px;
+                height:100px; 
+                position:absolute;
+                left: 400px;
+                top: 200px;
+            }
+            #box2{
+                background-color: red;
+                width: 100px;
+                height:100px; 
+                position:absolute;
+                left: 200px;
+                top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1" class="box1"></div>
+        
+        <div id="box2" class="box2"> </div>
+        <br>
+        <br>
+        <br>
+        <input type="button" id="btn1" value="请点击我">
+        <script>
+            var target = document.getElementById("btn1");
+            target.onclick = function(){
+                // alert("test");
+                var leftValue = document.getElementById("box1").style.left;
+                leftValue = leftValue.replace("px","");
+                leftValue = Number(leftValue) + 5;
+                document.getElementById("box1").style.left = leftValue + "px";
+                
+            }
+        </script>
+       
+    </body>
+</html>
