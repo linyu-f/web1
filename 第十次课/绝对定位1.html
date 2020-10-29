@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:brown;
+        }
+        .wrapper{
+            background-color:lawngreen;
+            width: 800px;
+            height: 500px;
+            margin: 50px;
+            margin-left: 200px;
+            border: 1px solid red;
+            /* BFC 块级格式化上下文 清浮动*/
+            overflow: hidden;
+        }
+        .grandParents{
+            background-color:burlywood;
+            width: 600px;
+            height: 400px;
+            margin: 20px;
+        }
+        .parent1{
+            background-color:aqua;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+        }
+        .parent2{
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .son1{
+            background-color: palevioletred;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 15px;
+        }
+        .son2{
+            background-color: antiquewhite;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="grandParents">
+            <div class="parent1">
+                <div class="son1"> </div>
+            </div>
+            <div class="parent2">
+                <div class="son2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
