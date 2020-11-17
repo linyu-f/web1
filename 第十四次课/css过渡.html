@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡</title>
+    <style>
+        #wrapper{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border: 10px solid green;
+        }
+        #wrapper:hover{
+            width: 500px;
+            height: 300px;
+            transition: all ease 5s /*3s 放在上面延迟3s再过渡*/;
+        }
+    </style>
+    
+</head>
+<body onload="init()">
+    <div id="wrapper">
+
+    </div>
+    <script>
+        function init(){
+            var target = window.document.getElementById("wrapper");
+            target.style.backgroundColor="pink";
+        }
+        // var apple = 20;
+        // var lemon = "柠檬";
+        var banana = true;
+        var pear = null;
+        var orange = undefined;
+        var peach = function peachSum(){
+
+        }
+        var watermelon = {}
+    </script>
+</body>
+</html>
