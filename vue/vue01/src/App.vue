@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <My/>
+    <!-- <My/> -->
+    <student/>
   </div>
 </template>
 
 <script>
-import My from './components/My'
+// import My from './components/My'
+import student from './components/student'
+import axios from 'axios'
 export default {
   name: 'App',
   components: {
-    My
+    // My
+    student
   }
 }
 </script>
