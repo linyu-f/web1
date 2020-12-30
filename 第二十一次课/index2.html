@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <style>
+        #wrapper{
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+    <script>
+        $(this).mousemove(function(event){
+            $("#wrapper").css("left",event.clientX+"px");
+            $("#wrapper").css("top",event.clientY+"px");
+            $("#wrapper").addClass("new");
+        })
+        $(this).mouseout(function(){
+            $("#wrapper").css("left",0+"px")
+            $("#wrapper").css("top",0+"px")
+            $("#wrapper").removeClass("new")
+        })
+    </script>
+</body>
+</html>

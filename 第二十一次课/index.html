@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        #d1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+    <script>
+        window.addEventListener("click",function(){
+            console.log("this is click")
+        })
+        // window.onclick = function(){}
+        // window.addEventListener("mousemove",function(event){
+        //     console.log(event.x + "" + event.y);
+        //     console.log(event.clientX + "*" + event.clientY);
+            
+        // })
+        
+        window.addEventListener("mousemove",function(event){
+            document.getElementById("d1").style.left = event.clientX + "px"
+            document.getElementById("d1").style.top = event.clientY + "px"
+            
+        })
+        
+        // window.addEventListener("mouseenter",function(){
+        //     document.getElementById("d1").style.backgroundColor = "green"
+        // })
+        var target = document.getElementById("d1");
+        window.addEventListener("mouseout",function(){
+            target.style.backgroundColor = "blue"
+            target.style.left = 0
+            target.style.top = 0
+        })
+    </script>
+</body>
+</html>
